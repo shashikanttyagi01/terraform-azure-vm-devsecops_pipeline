@@ -98,7 +98,7 @@ PRODVMs = {
     managed_disk_type   = "Standard_LRS"
     computer_name       = "vm2"
     admin_username      = "testadmin"
-    # admin_password                  = "Adminpassword@9984"
+     admin_password                  = "Adminpassword@9984"
     disable_password_authentication = "false"
   }
   vm2 = {
@@ -117,7 +117,7 @@ PRODVMs = {
     managed_disk_type   = "Standard_LRS"
     computer_name       = "vm2"
     admin_username      = "testadmin"
-    # admin_password                  = "Adminpassword@9984"
+     admin_password                  = "Adminpassword@9984"
     disable_password_authentication = "false"
   }
 }
