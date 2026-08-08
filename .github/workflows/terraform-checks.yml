@@ -1,0 +1,44 @@
+name: Terraform Checks
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  terraform-checks:
+
+    name: Terraform Format and Validate
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: environments/production
+
+    steps:
+
+      # 1. Checkout source code
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      # 2. Install Terraform
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v4
+
+      # 3. Initialize Terraform
+      - name: Terraform Init
+        run: terraform init -backend=false
+
+      # 4. Check Terraform formatting
+      - name: Terraform Format Check
+        run: terraform fmt -check -recursive
+
+      # 5. Validate Terraform configuration
+      - name: Terraform Validate
+        run: terraform validate
