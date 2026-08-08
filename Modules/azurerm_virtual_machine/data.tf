@@ -1,5 +1,5 @@
 data "azurerm_network_interface" "vm_id" {
-    for_each = var.var_vm
+  for_each            = var.var_vm
   name                = each.value.nicname
   resource_group_name = each.value.resource_group_name
 }
