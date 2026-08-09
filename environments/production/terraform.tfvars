@@ -12,13 +12,7 @@ RG = {
     name     = "prodrg2"
     location = "central india"
   }
-  rg3 = {
-
-    name     = "prodrg3"
-    location = "central india"
-  }
-
-
+ 
 }
 
 VNETs = {
