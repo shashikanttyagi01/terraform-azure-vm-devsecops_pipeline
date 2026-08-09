@@ -12,7 +12,7 @@ RG = {
     name     = "prodrg2"
     location = "central india"
   }
- 
+
 }
 
 VNETs = {
